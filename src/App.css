@@ -1,0 +1,207 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h2 {
+  color: #181466;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #181466;
+  color: white;
+}
+
+td {
+  background-color: #fff;
+}
+
+button {
+  background-color:  #181466;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+button:hover {
+  background-color:  #181466;
+}
+
+.modal {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal form div {
+  margin-bottom: 12px;
+}
+
+.modal form label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.modal form input[type="text"],
+.modal form input[type="date"],
+.modal form select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal form button[type="submit"] {
+  background-color:  #181466;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.modal form button[type="button"] {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.modal form button[type="submit"]:hover {
+  background-color:  #181466;
+}
+
+.modal form button[type="button"]:hover {
+  background-color: #d32f2f;
+}
+
+/* Toolbar styling */
+.toolbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.toolbar1 button
+{
+  margin-left: 900px;
+  padding: 10px;
+}
+.toolbar2 button
+{
+  margin-left: 0px;
+}
+
+.left-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.searchbar input[type="text"] {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 970px;
+}
+
+/* Pagination styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  margin: 0 5px;
+}
+
+.pagination span {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* Dropdown Menu styling */
+.menu {
+  position: relative;
+  display: inline-block;
+}
+
+.menu button {
+  background-color:  #181466;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.menu .dropdown {
+  display: none;
+  position: absolute;
+  background-color: rgb(33, 36, 135);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.menu:hover .dropdown {
+  display: block;
+}
+
+.menu .dropdown button {
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.menu .dropdown button:hover {
+  background-color: #2e338e;
+}
