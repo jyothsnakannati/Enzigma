@@ -1,9 +1,9 @@
-// App.js
 import React, { useState } from 'react';
 import TaskList from './TaskList';
 import TaskForm from './TaskForm';
 import DeleteConfirmation from './DeleteConfirmation';
 import './App.css';
+
 function App() {
   const initialTasks = [
     {
@@ -35,10 +35,16 @@ function App() {
       comments: 'This task is good',
     },
   ];
+
+  // Define the state for pagination
+  const [tasksPerPage, setTasksPerPage] = useState(10); // Default 10 tasks per page
+  const [currentPage, setCurrentPage] = useState(1); // Default to page 1
+
   const [tasks, setTasks] = useState(initialTasks); // Set initial tasks
   const [editingTask, setEditingTask] = useState(null);
   const [isFormVisible, setFormVisible] = useState(false);
   const [taskToDelete, setTaskToDelete] = useState(null);
+
   const addTask = (task) => {
     setTasks([...tasks, task]);
     setFormVisible(false);
@@ -72,9 +78,24 @@ function App() {
     setFormVisible(true);
   };
 
+  // Function to reset the pagination and set the tasks per page
+  const handleSetTasksPerPage = (num) => {
+    setTasksPerPage(num);
+    setCurrentPage(1); 
+  };
+
   return (
     <div>
-      <TaskList tasks={tasks} onEdit={editTask} onDelete={deleteTask} onCreate={openForm}  />
+      <TaskList
+        tasks={tasks}
+        tasksPerPage={tasksPerPage}
+        currentPage={currentPage} // Pass currentPage
+        setCurrentPage={setCurrentPage} // Pass setCurrentPage function
+        onSetTasksPerPage={handleSetTasksPerPage} // Pass the function to set tasks per page
+        onEdit={editTask}
+        onDelete={deleteTask}
+        onCreate={openForm}
+      />
       {isFormVisible && (
         <TaskForm
           currentTask={editingTask ? editingTask.task : null}
